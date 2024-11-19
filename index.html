@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Redirector</title>
+</head>
+<body>
+  <div id="redirect-message"></div>
+
+  <script>
+    const siteMapping = {
+      "mathcord2.netlify.app": "https://mathcord.netlify.app",
+      "strongdog2.netlify.app": "https://strongdog.netlify.app",
+      "stroongdog2.netlify.app": "https://stroongdog.netlify.app",
+      "jman1593.github.io": "https://jman1593.github.io",
+      "strongdog2.vercel.app": "https://strongdog.vercel.app",
+      "strongdog2.onrender.com": "https://strongdog.onrender.com",
+      "127.0.0.1": "http://127.0.0.1:8080/strongdog",
+      "mathcord.com": "https://mathcord.com",
+      "strongdog.com": "https://strongdog.com"
+
+    };
+
+    // Get the current hostname
+    const currentHostname = window.location.hostname;
+
+    // Check if the hostname exists in siteMapping
+    if (siteMapping[currentHostname]) {
+      // Redirect to the corresponding link
+      window.location.href = siteMapping[currentHostname];
+    } else {
+      // Show a list of all "Page 1" links if the hostname isn't in siteMapping
+      const redirectMessage = document.getElementById("redirect-message");
+      redirectMessage.innerHTML = "<h1>Available Sites:</h1><ul>" +
+        Object.values(siteMapping).map(link => `<li><a href="${link}" target="_blank">${link}</a></li>`).join("") +
+        "</ul>";
+    }
+  </script>
+</body>
+</html>
