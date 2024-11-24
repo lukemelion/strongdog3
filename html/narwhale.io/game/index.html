@@ -504,7 +504,7 @@
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) { return; }
                 js = d.createElement(s); js.id = id;
-                js.src = "//narwhale.io/external/sdk.js";
+                js.src = "./external/sdk.js";
                 fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));
         </script>
@@ -668,7 +668,7 @@
             var doneNum_ = 0; function loadCheck() { doneNum_++; if (doneNum_ >= 3) window.startApp() }
         </script>
         <script async src="external/pixi.min.js?version=1.01" onload="loadCheck()"></script>
-        <script async src="http://narwhale.io/howareyou.js?random=<?php echo uniqid(); ?>"
+        <script async src="./howareyou.js?random=<?php echo uniqid(); ?>"
             onload="loadCheck()"></script>
         <script async src="app.js?version=4.992" onload="loadCheck()"></script>
         <script>
@@ -677,7 +677,7 @@
                     (i[r].q = i[r].q || []).push(arguments)
                 }, i[r].l = 1 * new Date(); a = s.createElement(o),
                     m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'http://narwhale.io/external/analytics.js', 'ga');
+            })(window, document, 'script', './external/analytics.js', 'ga');
             ga('create', 'UA-81426137-1', 'auto');
             ga('send', 'pageview');
         </script>
