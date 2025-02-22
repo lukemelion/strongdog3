@@ -45,4 +45,4 @@ export const siteMapping = {
   "hateroll.com": ["https://hateroll.com/strongdog2", "https://hateroll.com/strongdog3"],
   "hateroll.com/strongdog2": ["https://hateroll.com", "https://hateroll.com/strongdog3"],
   "hateroll.com/strongdog3": ["https://hateroll.com", "https://hateroll.com/strongdog2"],
-};
+}; 
