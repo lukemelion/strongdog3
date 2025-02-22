@@ -41,7 +41,7 @@ jobs:
       - name: Reorganize Files for strongdog3
         run: |
           mkdir -p changed/strongdog3
-          # Enable extended globbing to move all items except the strongdog3 folder itself
+          # Enable extended globbing and move everything except strongdog3 folder into it
           shopt -s extglob
           mv changed/!(strongdog3) changed/strongdog3/
 
@@ -58,7 +58,7 @@ jobs:
           r2-secret-access-key: ${{ secrets.CLOUDFLARE_R2_SECRET_ACCESS_KEY }}
           r2-bucket: ${{ secrets.CLOUDFLARE_R2_BUCKET }}
           source-dir: './changed/strongdog3'
-          destination-dir: 'strongdog3/'  # Files will be uploaded into this folder in R2
+          destination-dir: 'strongdog3/'  # Files will be uploaded into the strongdog3 folder in R2
           output-file-url: true
           multipart-size: 100
           max-retries: 5
