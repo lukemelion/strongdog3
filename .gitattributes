@@ -1,2 +1,0 @@
-html/real[[:space:]]simulator[[:space:]]monster[[:space:]]truck/game/Build/RealSimulatorMonsterTruckV3.data.unityweb filter=lfs diff=lfs merge=lfs -text
-html/sling[[:space:]]drift/game/Build/webglProj.asm.code.unityweb filter=lfs diff=lfs merge=lfs -text
