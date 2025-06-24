@@ -63,4 +63,5 @@ export const siteMapping = {
   "gametree.net": ["https://gametree.net/strongdog2", "https://gametree.net/strongdog3"],
   "gametree.net/strongdog2": ["https://gametree.net", "https://gametree.net/strongdog3"],
   "gametree.net/strongdog3": ["https://gametree.net", "https://gametree.net/strongdog2"],
+  "shhdontaskme.netlify.app": ["https://shhdontaskme.netlify.app", "https://shhdontaskme.netlify.app/strongdog3"],
 };
